@@ -3465,6 +3465,6 @@ outputs:
 - contextPath: Endpoint.Domain
   description: Endpoint domain name
   type: string
-fromversion: 5.0.0
 tests:
 - Impossible Traveler - Test
+fromversion: 5.0.0
