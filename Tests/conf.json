@@ -3399,8 +3399,7 @@
         "Lastline v2",
         "TruSTAR",
         "SlackV2",
-        "VulnDB",
-        "urlscan.io"
+        "VulnDB"
     ],
     "unmockable_integrations": {
         "urlscan.io": "Uses data that comes in the headers",
