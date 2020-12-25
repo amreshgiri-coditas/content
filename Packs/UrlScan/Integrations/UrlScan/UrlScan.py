@@ -33,15 +33,10 @@ BLACKLISTED_URL_ERROR_MESSAGE = 'The submitted domain is on our blacklist. ' \
 
 
 def http_request(method, url_suffix, json=None, wait=0, retries=0):
-    if method == 'GET':
-        headers = {'API-Key': APIKEY,
-                   'Accept': 'application/json'}  # type: ignore
-    elif method == 'POST':
-        headers = {
-            'API-Key': APIKEY,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
+    headers = {'API-Key': APIKEY,
+               'Accept': 'application/json'}
+    if method == 'POST':
+        headers.update({'Content-Type': 'application/json'})
     demisto.debug(
         'requesting https request with method: {}, url: {}, data: {}'.format(method, BASE_URL + url_suffix, json))
     r = requests.request(
